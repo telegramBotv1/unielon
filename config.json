@@ -1,0 +1,51 @@
+[
+    {
+        "wallet_address": "DKHsGS1WTSSeyPexzNZBJpRMKut48pLLgN",
+        "sendList": [
+            "DCcBma6A9bGerVZivA5KEKQ8KbLsGn32zj",
+            "DBzrX83rpw5eTPHoMjgmG4zBTdqVpVfZpY",
+            "DPsSSwcqsfcUcBqWnFt7QrJKVq2EYnTedh",
+            "DHiH9nEBbYRgy2Cgywv9a9GmsuuxiorcqZ",
+            "DJaMT4AE2TJZhb6pwFEZogi6j5LvMtLh8s"
+        ]
+    },
+    {
+        "wallet_address": "DAEeeStacS7D6tBEVvPhMmPhto9FWRMjsw",
+        "sendList": [
+            "DDcWFqM3u3NP6iQyTJKpdsNfTcT6B88gif",
+            "DCWpN2NMosHWWxVok1kGcSaKe8cn1yHg3K",
+            "D5vZV11ztyD1D9qsPRCFfBqUm6bXhHg8K6",
+            "D5PKbWhX7DuRff6bZrBLd6CGkmmsq3kUdd",
+            "DTF6hSPXPMJvxDK8biGJ1tmZAjoT4ruGQm"
+        ]
+    },
+    {
+        "wallet_address": "DTCvPpHMZhSUsmmGGPCERM9fjC2LKVRuid",
+        "sendList": [
+            "DRvhgG6YLRz2wPSTBJtpKDSw8iqduCDXkF",
+            "DQrGtN8uJH1EN4aPwXB2mYXvSwgNomjqcD",
+            "DDYynuTeCSLLgXVtSF6KT9cfywJjgPPpFP",
+            "DELmugbJ7fnfSMAAZiNjxvyw2hY7Yj2Q8Z",
+            "DRZpx6PudsXWnnWb1y7eW7TVYNmZ4ywtdk"
+        ]
+    },
+    {
+        "wallet_address": "DE2PsXUnjRHkGzcJR6v5v7cEMPpBRGiMa9",
+        "sendList": [
+            "DB6f6mpGJ7NdbNfuJWZQu5gJwuzL9jLoBP",
+            "DM7q9MP17uU6V7ErtA3qAryrBUKB2HN1oC",
+            "DSshyAsyshRfqf3a3U4P6X7omLGwJTLcrs",
+            "DAvwVRuEX7cpvi6rootAY2tw5ivJRWD2Ur",
+            "DAiBXLy25pkpcUitMEDnV1L6ZjmPYfnC5g"
+        ]
+    },
+    {
+        "wallet_address": "DTR78YWBBKXGoBY3W8ohZhEvUtaqTUCoQ5",
+        "sendList": [
+            "DNWijrsy2ix9t7xYfyX8rD5gtshiKwL46J",
+            "DJtqWQVahAJ4Futk8X7Q51qJ6gMYaP8Aq5",
+            "DEaB3A1JQfZ6xAgf14yxvGFSmcrUCG6wa3",
+            "DHsLp7RHf5njrTxFtXDTX8hhwskXBsJj9o"
+        ]
+    }
+]
