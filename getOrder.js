@@ -25,15 +25,17 @@ async function getOrder(receive_address) {
 }
 
 async function main() {
-    let map = new Map()
+    // let map = new Map()
+    let resOrder = []
     for (let i = 0; i < config.length; i++) {
         let orderList = await getOrder(config[i]['wallet_address'])
         let filterOrderList = orderList.filter(item => item.tick === tick && item.drc20_tx_hash)
-        filterOrderList.forEach(item => {
-            map.set(item.order_id, item)
-        })
+        // filterOrderList.forEach(item => {
+        //     map.set(item.order_id, item)
+        // })
+        resOrder.push(...filterOrderList)
     }
-    return Array.from(map.values())
+    return resOrder
 }
 
 function convertTimestamp(timestamp) {

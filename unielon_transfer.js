@@ -6,6 +6,7 @@ const { postData } = require('./http')
 const node_url = "https://unielon.com/v3"
 const rate_fee = '13377' // gas费
 const tick = 'POWS'
+const amt = '300000000000' // 发送数量
 
 function send_transaction(wallet_address, to_address, amt, tick) {
     return new Promise(async (resolve, reject) => {
@@ -41,7 +42,7 @@ async function main() {
 
         if (current_send_list.length !== 0) {
             let to_address = '' // 接收地址
-            let amt = '500000000000' // 发送数量
+            
             for (let send_index = 0; send_index < current_send_list.length; send_index++) {
                 to_address = current_send_list[send_index]
                 if (!regex(to_address)) {

@@ -26,6 +26,11 @@ unielon_transfer这个文件就是主要的执行文件 执行 这个文件  nod
 
 http 这个就是封装的请求 需要修改一下代理地址 请使用socks5
 
+tokenAdddres 文件夹是获取其他铭文地址的 执行get_tokens_address 
+
+X 文件夹是获取 X评论区的地址的 
+
+
 ## 重要信息！！！
 
 1. 查看http中socks5 是否正确
