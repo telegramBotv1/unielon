@@ -25,7 +25,7 @@ async function readAndExtractAddresses(filePath) {
 // 处理数据
 function getSuccess() {
     return new Promise((resolve, reject) => {
-        const filesToRead = ['./第一批的地址.json', './第二批的地址.json', './第三批的地址.json', './第四批的地址.json', './blackList.json'];
+        const filesToRead = ['./第一批的地址.json', './第二批的地址.json', './第三批的地址.json', './第四批的地址.json', './blackList.json', './第五批的地址其他社区.json'];
         readFiles(filesToRead).then(contents => {
             let concatList = []
             if (contents.length != 1) {

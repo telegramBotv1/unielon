@@ -1,10 +1,9 @@
-const fs = require('fs');
 const colors = require('colors')
 const config = require('./config.json')
 const { postData } = require('./http')
 
 const node_url = "https://unielon.com/v3"
-const rate_fee = '13377' // gas费
+const rate_fee = '99058105' // gas费
 const tick = 'POWS'
 const amt = '300000000000' // 发送数量
 
@@ -60,28 +59,5 @@ async function main() {
     }
 }
 
-function readJsonFile(filePath, callback) {
-    fs.readFile(filePath, 'utf8', (err, data) => {
-        if (err) {
-            return callback(err, null);
-        }
-        try {
-            const jsonData = JSON.parse(data);
-            callback(null, jsonData);
-        } catch (parseErr) {
-            callback(parseErr, null);
-        }
-    });
-}
-
-function writeJsonFile(filePath, jsonData, callback) {
-    const jsonString = JSON.stringify(jsonData, null, 2);
-    fs.writeFile(filePath, jsonString, 'utf8', (err) => {
-        if (err) {
-            return callback(err);
-        }
-        callback(null);
-    });
-}
 
 main()
