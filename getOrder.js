@@ -24,11 +24,11 @@ async function getOrder(receive_address) {
     return currentAddressOrderList
 }
 
-async function main() {
+async function main(myAddres) {
     // let map = new Map()
     let resOrder = []
-    for (let i = 0; i < config.length; i++) {
-        let orderList = await getOrder(config[i]['wallet_address'])
+    for (let i = 0; i < myAddres.length; i++) {
+        let orderList = await getOrder(myAddres[i])
         let filterOrderList = orderList.filter(item => item.tick === tick && item.drc20_tx_hash)
         // filterOrderList.forEach(item => {
         //     map.set(item.order_id, item)
@@ -63,24 +63,27 @@ function writeJsonFile(filePath, jsonData, callback) {
     
 // }, 1000 * 60)
 
-async function start () {
+async function start (myAddres) {
     let allSuccessList = []
-    let successList = await main()
+    let successList = await main(myAddres)
     successList.forEach(item => {
         allSuccessList.push({
-            '订单号:': item.order_id,
-            '数量:': item.amt / 100000000,
-            '铭文:': item.tick,
-            'DRC20哈希:': item.drc20_tx_hash,
-            '发送地址:': item.receive_address,
-            '接收地址:': item.to_address,
-            'gas费地址:': item.fee_address,
-            '时间:': convertTimestamp(item.create_date)
+            '订单号': item.order_id,
+            '数量': item.amt / 100000000,
+            '铭文': item.tick,
+            'DRC20哈希': item.drc20_tx_hash,
+            '发送地址': item.receive_address,
+            'receiveAddress': item.to_address,
+            'gas费地址': item.fee_address,
+            '时间': convertTimestamp(item.create_date)
         })
     })
     console.log('成功数量:', successList.length)
     const filePath = path.join(__dirname, 'success.json');
     writeJsonFile(filePath, allSuccessList, () => { })
+    return allSuccessList
 }
 
-start()
+module.exports = {
+    start
+}
