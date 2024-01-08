@@ -4,7 +4,7 @@ const { postData } = require('../http')
 
 const node_url = "https://unielon.com/v3"
 let limit = 50
-let tick = 'BELLS'
+let tick = 'UNIX'
 
 async function getCurrentTick() {
     let allInfo = []
@@ -18,7 +18,7 @@ async function getCurrentTick() {
 
     return new Promise(async (resolve, reject) => {
         // 不要前三页 也不要 后十页 过滤掉大户跟小户
-        for (let i = 3; i < Math.floor(pages) - 10; i++) {
+        for (let i = 100; i < Math.floor(pages) - 100; i++) {
             console.log("获取" + i)
             outerInfo = await getinfo(i)
             allInfo.push(...outerInfo.data)

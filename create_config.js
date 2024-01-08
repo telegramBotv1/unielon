@@ -19,7 +19,7 @@ let myAddres = [
 
 function getAllAdders() {
     return new Promise((resolve, reject) => {
-        let filesToRead = './tokenAddres/BUNNY_filter_addres.json'
+        let filesToRead = './tokenAddres/UNIX_filter_addres.json'
         readFiles(filesToRead).then(contents => {
             resolve(contents)
         }).catch(err => {
